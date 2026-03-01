@@ -4,6 +4,8 @@ A terminal-based model interpretability tool that lets you see inside a language
 
 This research tool was built in less than 48 hours at the Mistral Worldwide Hackathon (San Francisco Edition). 
 
+[Link to video demo on YouTube](https://www.youtube.com/watch?v=mcmC3lf-S_o)
+
 ## What It Does
 
 Thought Tracer intercepts the hidden states at every transformer layer and projects them into vocabulary space, revealing what the model would predict if it stopped thinking at each layer. This exposes:
