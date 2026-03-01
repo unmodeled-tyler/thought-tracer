@@ -2,7 +2,7 @@
 
 A terminal-based model interpretability tool that lets you see inside a language model's decision-making process, layer by layer. Built on the **logit lens** technique applied to **Ministral 3B** (`Ministral-3-3B-Instruct-2512`).
 
-Built in 48 hours at the Mistral Hackathon (Open Track).
+Built in less than 48 hours at the Mistral Worldwide Hackathon (San Francisco Edition). 
 
 ## What It Does
 
