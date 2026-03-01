@@ -17,15 +17,22 @@ Thought Tracer intercepts the hidden states at every transformer layer and proje
 ### Layer Predictions
 A full table of top-k predictions at every layer (0-25), showing how the model's thinking evolves from early pattern matching to final prediction.
 
+<img width="3384" height="2192" alt="Screenshot From 2026-02-28 18-43-06" src="https://github.com/user-attachments/assets/8609d4b6-dfdd-4287-921b-ff98f414a5b7" />
+
+
 ### Layer Agreement Chart
 A visual map of all 26 layers showing which layers agree with the final prediction. Highlights the convergence point — the first layer where the prediction matches the final answer and stays matched through all remaining layers.
 
-### Token Statistics
+### Entropy
+
+<img width="3384" height="2192" alt="Screenshot From 2026-02-28 18-48-31" src="https://github.com/user-attachments/assets/6dbfdfbf-6124-4a9b-b700-8768be1e812e" />
+
+
 - **Per-layer entropy chart** — Shannon entropy in bits at each layer, color-coded by uncertainty level
 - **Hallucination risk score** — a weighted composite of three factors:
-  - Entropy factor (40%): final layer prediction uncertainty
-  - Convergence factor (30%): how late the model settled on its answer
-  - Confidence factor (30%): top-1 prediction probability
+- Entropy factor (40%): final layer prediction uncertainty
+- Convergence factor (30%): how late the model settled on its answer
+- Confidence factor (30%): top-1 prediction probability
 - **Accuracy metrics** — rank and probability of the actual next token, plus the model's confidence in its own prediction
 
 ### AI Analysis (Mistral API)
