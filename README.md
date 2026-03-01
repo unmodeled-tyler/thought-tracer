@@ -1,6 +1,6 @@
 # Thought Tracer
 
-A terminal-based model interpretability tool that lets you see inside a language model's decision-making process, layer by layer. Built on the **logit lens** technique applied to **Ministral 3B/8B.**
+A terminal-based model interpretability tool that lets you see inside a language model's decision-making process, layer by layer. Built on the **logit lens** technique and applied to **Ministral 3B/8B.**
 
 This research tool was built in less than 48 hours at the Mistral Worldwide Hackathon (San Francisco Edition). 
 
