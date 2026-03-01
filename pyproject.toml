@@ -1,0 +1,30 @@
+[project]
+name = "mistral-hackathon-logit"
+version = "0.1.0"
+description = "Terminal logit lens for Ministral 3 3B using transformers."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "accelerate>=1.4.0",
+  "mistral-common>=1.8.6",
+  "rich>=13.7.0",
+  "safetensors>=0.4.5",
+  "textual>=0.60.0",
+  "torch>=2.5.0",
+  "transformers @ git+https://github.com/huggingface/transformers",
+  "mistralai>=1.0.0",
+  "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+logitlens = "logitlens_tui.__main__:main"
+
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

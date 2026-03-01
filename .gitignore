@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environment
+.venv/
+
+# Environment / secrets
+.env
+
+# Model weights (too large for git)
+Ministral-3-3B-Instruct-2512/
+Ministral-3-8B-Instruct-2512-BF16/
+
+# Editor / IDE
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Claude Code
+.claude/
