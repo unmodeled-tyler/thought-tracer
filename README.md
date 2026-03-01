@@ -75,7 +75,6 @@ Ministral 3 8B: https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512
 ## Run
 
 ```bash
-cd thought-tracer
 python3 run_enhanced.py
 ```
 
