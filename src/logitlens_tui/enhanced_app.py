@@ -76,8 +76,6 @@ class ThoughtTracerScreen(Screen):
     BINDINGS = [
         ("n", "next_token", "Next Token"),
         ("p", "prev_token", "Previous Token"),
-        ("j", "jump_token", "Jump to Token"),
-        ("k", "change_k", "Change Top-K"),
         ("r", "refresh", "Refresh View"),
         ("a", "ai_analysis", "AI Analysis"),
         ("escape", "new_prompt", "New Prompt"),
@@ -143,15 +141,6 @@ class ThoughtTracerScreen(Screen):
                         id="ai-scroll"
                     )
 
-            # Control panel
-            with Container(id="controls"):
-                yield Label("Controls")
-                yield Button("Refresh", id="refresh-btn", variant="default")
-                yield Button("New Prompt", id="new-prompt-btn", variant="default")
-                yield Input(placeholder="Jump to token index...", id="jump-input")
-                yield Input(placeholder="Change top-k...", id="topk-input")
-                yield Static(id="status-bar")
-
         yield Footer()
 
     def on_mount(self) -> None:
@@ -204,10 +193,6 @@ class ThoughtTracerScreen(Screen):
             self.action_prev_token()
         elif event.button.id == "next-btn":
             self.action_next_token()
-        elif event.button.id == "refresh-btn":
-            self.action_refresh()
-        elif event.button.id == "new-prompt-btn":
-            self.action_new_prompt()
 
     def update_token_display(self) -> None:
         """Update the token display with current selection."""
@@ -613,35 +598,9 @@ class ThoughtTracerScreen(Screen):
         self.update_token_display()
         self.update_predictions()
 
-    def action_jump_token(self) -> None:
-        """Jump to specific content token index."""
-        jump_input = self.query_one("#jump-input", Input)
-        try:
-            index = int(jump_input.value)
-            if self.prompt_state and 0 <= index < len(self.prompt_state.content_positions):
-                self._content_index = index
-                self.selected_position = self.prompt_state.content_positions[index]
-                self.update_token_display()
-                self.update_predictions()
-                jump_input.value = ""
-        except ValueError:
-            pass
-
     def action_new_prompt(self) -> None:
         """Return to the prompt input screen."""
         self.app.pop_screen()
-
-    def action_change_k(self) -> None:
-        """Change top-k value."""
-        topk_input = self.query_one("#topk-input", Input)
-        try:
-            new_k = int(topk_input.value)
-            if 1 <= new_k <= 20:
-                self.top_k = new_k
-                self.update_predictions()
-                topk_input.value = ""
-        except ValueError:
-            pass
 
     def action_ai_analysis(self) -> None:
         """Trigger AI-powered analysis of the current token position."""
@@ -854,6 +813,8 @@ Footer {
 
 #token-nav {
     layout: horizontal;
+    height: auto;
+    min-height: 3;
     padding: 1;
     margin: 1 0;
     background: #1a1a2e;
@@ -892,13 +853,6 @@ Footer {
 
 #ai-scroll {
     height: 1fr;
-}
-
-#controls {
-    border: solid #2c3e6b;
-    padding: 1;
-    margin: 1 0;
-    background: #16213e;
 }
 
 Button {
