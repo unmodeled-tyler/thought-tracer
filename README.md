@@ -63,15 +63,12 @@ echo 'MISTRAL_API_KEY=your-key-here' >> .env
 
 You can get an API key from [console.mistral.ai](https://console.mistral.ai/). The key is only used when you press `a` — all other features work fully offline.
 
-## Pull The Real Weights
+## Download Models
 
-If the model directory came from a Git LFS checkout, pull the actual tensor files before running:
+This tool has a dropdown selector to change the model from Ministral 3B and Ministral 8B - At least *one* of those models is required for Thought Tracer to work. Due to the nature of the tool, the model must be it's original tensorfile format. 
 
-```bash
-git lfs pull
-```
-
-`model.safetensors` should be a multi-gigabyte file, not a ~135-byte LFS pointer.
+Ministral 3 3B: https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512
+Ministral 3 8B: https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512
 
 ## Run
 
