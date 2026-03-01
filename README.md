@@ -67,10 +67,10 @@ You can get an API key from [console.mistral.ai](https://console.mistral.ai/). T
 
 ## Download Models
 
-This tool has a dropdown selector to change the model from Ministral 3B and Ministral 8B - At least *one* of those models is required for Thought Tracer to work. Due to the nature of the tool, the model must be it's original tensorfile format. 
+This tool has a dropdown selector to change the model from Ministral 3B and Ministral 8B - At least *one* of those models is required for Thought Tracer to work. Due to the nature of the tool, the model must be its original tensorfile format. 
 
-Ministral 3 3B: https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512
-Ministral 3 8B: https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512
+- Ministral 3 3B: https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512
+- Ministral 3 8B: https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512
 
 ## Run
 
