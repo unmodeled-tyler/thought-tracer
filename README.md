@@ -6,7 +6,7 @@ This research tool was built in less than 48 hours at the Mistral Worldwide Hack
 
 [Link to video demo on YouTube](https://www.youtube.com/watch?v=mcmC3lf-S_o)
 
-Read the original post on LessWrong that inspired this project: https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens
+[Read the original post on LessWrong that inspired this project](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens)
 
 ## What It Does
 
